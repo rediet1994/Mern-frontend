@@ -15,10 +15,7 @@ const SageTrainingApplicationForm = () => {
     currentSchool: "",
     grade: "",
     course: "",
-    startDate: "",
-    emergencyContactName: "",
-    emergencyContactPhone: "",
-    message: "",
+    
   });
 
   const [page, setPage] = useState(1);
@@ -40,13 +37,9 @@ const SageTrainingApplicationForm = () => {
         email: "",
         phone: "",
         address: "",
-        currentSchool: "",
         grade: "",
         course: "",
-        startDate: "",
-        emergencyContactName: "",
-        emergencyContactPhone: "",
-        message: "",
+        
       });
       setPage(1);
     } catch (error) {
@@ -166,17 +159,7 @@ const SageTrainingApplicationForm = () => {
         {/* Page 3: Academic Information */}
         {page === 3 && (
           <div>
-            <div className="mb-3">
-              <label className="form-label">Current School</label>
-              <input
-                type="text"
-                className="form-control"
-                name="currentSchool"
-                value={formData.currentSchool}
-                onChange={handleChange}
-                required
-              />
-            </div>
+            
             <div className="mb-3">
               <label className="form-label">Grade/Level</label>
               <input
@@ -216,35 +199,14 @@ const SageTrainingApplicationForm = () => {
         {/* Page 4: Additional Information */}
         {page === 4 && (
           <div>
-            <div className="mb-3">
-              <label className="form-label">Emergency Contact Name</label>
-              <input
-                type="text"
-                className="form-control"
-                name="emergencyContactName"
-                value={formData.emergencyContactName}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="mb-3">
-              <label className="form-label">Emergency Contact Phone</label>
-              <input
-                type="tel"
-                className="form-control"
-                name="emergencyContactPhone"
-                value={formData.emergencyContactPhone}
-                onChange={handleChange}
-                required
-              />
-            </div>
+          
             <div className="mb-3">
               <label className="form-label">Additional Message</label>
               <textarea
                 className="form-control"
                 name="message"
                 value={formData.message}
-                onChange={handleChange}
+                onChange={handleChange} 
                 required
               />
             </div>
